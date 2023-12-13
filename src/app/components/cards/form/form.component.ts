@@ -20,8 +20,4 @@ export class FormComponent implements OnInit {
     submmit() {
       alert('Novo pensamento criado !')
     }
-
-    cancel() {
-      alert('Novo pensamento descartado !')
-    }
 }
