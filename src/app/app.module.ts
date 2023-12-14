@@ -9,6 +9,7 @@ import { FormComponent } from './components/cards/form/form.component';
 import { FormsModule } from '@angular/forms';
 import { ListarPensamentosComponent } from './components/cards/listar-pensamentos/listar-pensamentos.component';
 import { CardComponent } from './components/cards/card/card.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CardComponent } from './components/cards/card/card.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CardDTO } from '../CardDTO';
+import { CardService } from '../card.service';
 
 @Component({
   selector: 'app-listar-pensamentos',
@@ -6,20 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./listar-pensamentos.component.css'],
 })
 export class ListarPensamentosComponent implements OnInit {
-  listaPensamentos = [
-    {
-      conteudo: 'Treiando Angular',
-      autoria: 'EU',
-      modelo: 'modelo3',
-    },
-    {
-      conteudo: 'Testando *ngFor',
-      autoria: 'EU',
-      modelo: 'modelo1',
-    },
-  ];
+  listaPensamentos: CardDTO[] = [];
 
-  constructor() {}
+  constructor(private service: CardService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.service.listar().subscribe((cardList) => {
+      this.listaPensamentos = cardList;
+    });
+  }
 }

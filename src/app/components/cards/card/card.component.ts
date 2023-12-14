@@ -1,3 +1,5 @@
+import { CardService } from '../card.service';
+import { CardDTO } from './../CardDTO';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +9,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
-  @Input() pensamento = {
+  @Input() pensamento: CardDTO = {
+    id: 0,
     conteudo: 'Treiando Angular',
     autoria: 'EU',
     modelo: 'modelo3',
