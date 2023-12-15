@@ -39,5 +39,4 @@ export class EditarCardComponent implements OnInit {
   cancel() {
     this.router.navigate(['/listarPensamento']);
   }
-
 }
