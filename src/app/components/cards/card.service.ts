@@ -18,4 +18,18 @@ export class CardService {
     return this.http.post<CardDTO>(this.API, pensamento);
   }
 
+  put(card: CardDTO): Observable<CardDTO> {
+    const url = `${this.API}/${card.id}`;
+    return this.http.put<CardDTO>(url, card);
+  }
+
+  delete(id: number): Observable<CardDTO> {
+    const url = `${this.API}/${id}`;
+    return this.http.delete<CardDTO>(url);
+  }
+
+  getById(id: number): Observable<CardDTO> {
+    const url = `${this.API}/${id}`;
+    return this.http.get<CardDTO>(url);
+  }
 }

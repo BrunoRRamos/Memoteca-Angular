@@ -2,8 +2,8 @@
   "pensamentos": [
     {
       "id": 1,
-      "conteudo": "Treiando Angular",
-      "autoria": "EU",
+      "conteudo": "Treiando Angular EDITAR",
+      "autoria": "EU E EU",
       "modelo": "modelo3"
     },
     {
@@ -23,12 +23,6 @@
       "autoria": "EU DNV",
       "modelo": "modelo2",
       "id": 4
-    },
-    {
-      "conteudo": "TESTE 2",
-      "autoria": "EU",
-      "modelo": "modelo1",
-      "id": 5
     }
   ]
 }
