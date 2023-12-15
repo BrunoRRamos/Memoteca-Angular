@@ -9,6 +9,9 @@ import { FormComponent } from './components/cards/form/form.component';
 import { FormsModule } from '@angular/forms';
 import { ListarPensamentosComponent } from './components/cards/listar-pensamentos/listar-pensamentos.component';
 import { CardComponent } from './components/cards/card/card.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ExluirCardComponent } from './components/cards/excluir-card/exluir-card.component';
+import { EditarCardComponent } from './components/cards/editar-card/editar-card.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +20,15 @@ import { CardComponent } from './components/cards/card/card.component';
     FooterComponent,
     FormComponent,
     ListarPensamentosComponent,
-    CardComponent
+    CardComponent,
+    ExluirCardComponent,
+    EditarCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
