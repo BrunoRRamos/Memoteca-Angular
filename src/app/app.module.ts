@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormComponent } from './components/cards/form/form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ListarPensamentosComponent } from './components/cards/listar-pensamentos/listar-pensamentos.component';
 import { CardComponent } from './components/cards/card/card.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -28,7 +28,8 @@ import { EditarCardComponent } from './components/cards/editar-card/editar-card.
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

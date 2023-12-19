@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CardService } from '../card.service';
-import { CardDTO } from '../CardDTO';
 import { Router } from '@angular/router';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -14,6 +14,10 @@ export class FormComponent implements OnInit {
     autoria: '',
     modelo: '',
   };
+
+  form: FormGroup = {
+
+  }
 
   constructor(
     private service: CardService, 
