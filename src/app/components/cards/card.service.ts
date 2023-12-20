@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { CardDTO } from './CardDTO';
 import { Observable } from 'rxjs';
 
@@ -10,8 +10,13 @@ export class CardService {
   private readonly API = 'http://localhost:3000/pensamentos';
   constructor(private http: HttpClient) {}
 
-  listar(): Observable<CardDTO[]> {
-    return this.http.get<CardDTO[]>(this.API);
+  listar(pagina: number): Observable<CardDTO[]> {
+    const itemPorPagina = 6;
+    let params = new HttpParams()
+      .set("_page", pagina)
+      .set("_limit", itemPorPagina);
+
+    return this.http.get<CardDTO[]>(this.API, { params });
   }
 
   create(pensamento: CardDTO): Observable<CardDTO> {

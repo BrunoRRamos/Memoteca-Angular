@@ -9,11 +9,12 @@ import { CardService } from '../card.service';
 })
 export class ListarPensamentosComponent implements OnInit {
   listaPensamentos: CardDTO[] = [];
+  paginaAtual: number = 1;
 
   constructor(private service: CardService) {}
 
   ngOnInit(): void {
-    this.service.listar().subscribe((cardList) => {
+    this.service.listar(this.paginaAtual).subscribe((cardList) => {
       this.listaPensamentos = cardList;
     });
   }
