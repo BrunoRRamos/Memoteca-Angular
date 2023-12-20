@@ -11,6 +11,7 @@ import { CardComponent } from './components/cards/card/card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ExluirCardComponent } from './components/cards/excluir-card/exluir-card.component';
 import { EditarCardComponent } from './components/cards/editar-card/editar-card.component';
+import { BotaoCarregarMaisComponent } from './components/cards/listar-pensamentos/botao-carregar-mais/botao-carregar-mais.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { EditarCardComponent } from './components/cards/editar-card/editar-card.
     ListarPensamentosComponent,
     CardComponent,
     ExluirCardComponent,
-    EditarCardComponent
+    EditarCardComponent,
+    BotaoCarregarMaisComponent
   ],
   imports: [
     BrowserModule,

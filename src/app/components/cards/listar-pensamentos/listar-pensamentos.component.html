@@ -13,6 +13,13 @@
   </div>
 </section>
 
+<app-botao-carregar-mais
+  [loadPensamentos]="loadPensamentos"
+  (click)="loadMorePensamentos()"
+  >
+
+</app-botao-carregar-mais>
+
 <ng-template #semPensamentos>
   <div class="ff-inter sem-pensamentos">
     <p>Sem Pensamentos cadastrados</p>
