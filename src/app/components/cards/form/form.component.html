@@ -12,7 +12,7 @@
         placeholder="Digite o pensamento"
         >
 
-        <div class="mensagem__erro" *ngIf="form.get('comnteudo')?.errors">
+        <div class="mensagem__erro" *ngIf="form.get('conteudo')?.errors && form.get('autoria')?.touched">
           Campo Obrigatório
         </div>
 
@@ -24,6 +24,14 @@
         formControlName="autoria"
         placeholder="Digite o autoria oufonte"
         >
+
+        <div class="mensagem__erro" *ngIf="form.get('autoria')?.errors?.['required'] && form.get('autoria')?.touched" >
+          Campo Obrigatório
+        </div>
+        <div 
+        class="mensagem__erro" *ngIf="form.get('autoria')?.errors?.['minlength'] && form.get('autoria')?.touched">
+          Autoria precisa ter no mínimo 3 caracteres
+        </div>
 
         <label for="modelo">Selecione o modelo do card:</label>
         <div class="container-radio">
@@ -86,13 +94,21 @@
                 <div class="modelo modelo3 ff-roboto-mono">
                     <img src="../../../../assets/imagens/modelo3.png" alt="Aspas verdes">
                     <p class="conteudo">{{ form.get('conteudo')?.value }}</p>
-                    <p class="autoria"><b>{{ form.get('autotia')?.value }}</b></p>
+                    <p class="autoria"><b>{{ form.get('autoria')?.value }}</b></p>
                 </div>
             </div>
         </div>
         <div class="acoes">
-            <button (click)="submmit()" class="botao">Salvar</button>
-            <button (click)="cancel()" class="botao">Cancelar</button>
+            <button
+                [disabled]="!form.valid"
+                (click)="submmit()" 
+                [ngClass]="habilitarBotao()"
+                >Salvar
+            </button>
+            <button 
+                (click)="cancel()" 
+                class="botao">Cancelar
+            </button>
         </div>
     </form>
 </section>

@@ -39,7 +39,7 @@ export class FormComponent implements OnInit {
   }
 
   submmit() {
-    console.log(this.form.get('autoria')?.errors)
+    console.log(this.form.get('autoria')?.errors);
     if (this.form.valid) {
       this.service.create(this.form.value).subscribe(() => {
         this.router.navigate(['/listarPensamento']);
@@ -49,5 +49,12 @@ export class FormComponent implements OnInit {
 
   cancel() {
     this.router.navigate(['/listarPensamento']);
+  }
+
+  habilitarBotao(): string {
+    if (this.form.valid) {
+      return 'botao';
+    }
+    return 'botao__desabilitado';
   }
 }
