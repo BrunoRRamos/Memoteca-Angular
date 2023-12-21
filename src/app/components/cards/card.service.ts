@@ -10,11 +10,15 @@ export class CardService {
   private readonly API = 'http://localhost:3000/pensamentos';
   constructor(private http: HttpClient) {}
 
-  listar(pagina: number): Observable<CardDTO[]> {
+  listar(pagina: number, filtro: string): Observable<CardDTO[]> {
     const itemPorPagina = 6;
     let params = new HttpParams()
       .set("_page", pagina)
       .set("_limit", itemPorPagina);
+
+    if(filtro.trim().length > 1) {
+      params = params.set("q", filtro)
+    }
 
     return this.http.get<CardDTO[]>(this.API, { params });
   }
