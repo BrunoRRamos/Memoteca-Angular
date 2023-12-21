@@ -4,48 +4,56 @@
       "id": 1,
       "conteudo": "Treiando Angular EDITAR",
       "autoria": "EU E EU",
-      "modelo": "modelo3"
+      "modelo": "modelo3",
+      "favorito": false
     },
     {
       "id": 2,
       "conteudo": "Testando *ngFor",
       "autoria": "EU",
-      "modelo": "modelo1"
+      "modelo": "modelo1",
+      "favorito": false
     },
     {
       "id": 3,
       "conteudo": "Mussum Ipsum, cacilds vidis litro abertis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Diuretics paradis num copo é motivis de denguis. Atirei o pau no gatis, per gatis num morreus. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Sapien in monti palavris qui num significa nadis i pareci latim.",
       "autoria": "EU",
-      "modelo": "modelo2"
+      "modelo": "modelo2",
+      "favorito": false
     },
     {
       "conteudo": "TESTE, TESTE, TESTE, TESTE, TESTE, TESTE, TESTE, TESTE, TESTE, TESTE, TESTE",
       "autoria": "EU DNV",
       "modelo": "modelo2",
+      "favorito": false,
       "id": 4
     },
     {
       "conteudo": "TESTE 2.9",
       "autoria": "EU!",
       "modelo": "modelo3",
+      "favorito": false,
       "id": 5
     },
     {
       "conteudo": "ETA",
       "autoria": "API",
       "modelo": "modelo2",
+      "favorito": false,
       "id": 6
     },
     {
       "conteudo": "TESTE TS",
       "autoria": "AAA",
       "modelo": "modelo3",
+      "favorito": false,
       "id": 7
     },
     {
       "conteudo": "RS ? KKK",
       "autoria": "TESTE",
       "modelo": "modelo1",
+      "favorito": false,
       "id": 8
     }
   ]

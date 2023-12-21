@@ -35,6 +35,7 @@ export class FormComponent implements OnInit {
         ]),
       ],
       modelo: ['modelo1'],
+      favorito: [false]
     });
   }
 

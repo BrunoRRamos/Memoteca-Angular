@@ -14,6 +14,7 @@ export class ExluirCardComponent implements OnInit {
     conteudo: '',
     autoria: '',
     modelo: '',
+    favorito: false
   };
 
   constructor(

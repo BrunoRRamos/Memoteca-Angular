@@ -13,11 +13,11 @@ export class CardService {
   listar(pagina: number, filtro: string): Observable<CardDTO[]> {
     const itemPorPagina = 6;
     let params = new HttpParams()
-      .set("_page", pagina)
-      .set("_limit", itemPorPagina);
+      .set('_page', pagina)
+      .set('_limit', itemPorPagina);
 
-    if(filtro.trim().length > 1) {
-      params = params.set("q", filtro)
+    if (filtro.trim().length > 1) {
+      params = params.set('q', filtro);
     }
 
     return this.http.get<CardDTO[]>(this.API, { params });
@@ -30,6 +30,11 @@ export class CardService {
   put(card: CardDTO): Observable<CardDTO> {
     const url = `${this.API}/${card.id}`;
     return this.http.put<CardDTO>(url, card);
+  }
+
+  mudarFavorito(pensamento: CardDTO): Observable<CardDTO> {
+    pensamento.favorito = !pensamento.favorito;
+    return this.put(pensamento);
   }
 
   delete(id: number): Observable<CardDTO> {
