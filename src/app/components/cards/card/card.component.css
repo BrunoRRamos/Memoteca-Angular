@@ -10,10 +10,13 @@
   cursor: pointer;
   margin-right: 5px;
   margin-top: 15px;
-  img {
-    width: 32px;
-    height: 32px;
-  }
+}
+
+.botao-editar img,
+.botao-excluir img,
+.botao-favorito img {
+  width: 32px;
+  height: 32px;
 }
 
 .pensamento {
