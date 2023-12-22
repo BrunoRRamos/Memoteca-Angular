@@ -7,6 +7,7 @@
       placeholder="Buscar"
       autofocus
       [(ngModel)]="filtro"
+      (keyup)="searchPensamentos()"
       >
     </div>
     <h2 class="ff-inter">Meu mural</h2>
