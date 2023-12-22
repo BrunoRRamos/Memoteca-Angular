@@ -11,6 +11,7 @@ export class ListarPensamentosComponent implements OnInit {
   listaPensamentos: CardDTO[] = [];
   paginaAtual: number = 1;
   loadPensamentos: boolean = true;
+  filtro: string = '';
 
   constructor(private service: CardService) {}
 
