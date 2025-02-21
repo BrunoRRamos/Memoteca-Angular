@@ -1,0 +1,12 @@
+# globals
+
+node_modules
+.vscode
+.env
+
+# cypress
+
+**/cypress/downloads
+**/cypress/screenshots
+**/cypress/videos
+**/cypress/logs
