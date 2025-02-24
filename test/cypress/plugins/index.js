@@ -11,7 +11,7 @@ function convertXlsxToJson(fileName, target) {
         const sheet = workbook.Sheets[sheetName];
 
         const jsonData = XLSX.utils.sheet_to_json(sheet, { defval: "" });
-        console.log(JSON.stringify(jsonData[target]));
+
         return jsonData[target];
     } catch (error) {
         console.log("Erro ao converter o arquivo:", error);
