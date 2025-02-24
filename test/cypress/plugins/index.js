@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const XLSX = require("xlsx");
 
-function convertXlsxToJson (fileName) {
+function convertXlsxToJson(fileName, target) {
     try {
         const filePath = path.join(__dirname, "..", "fixtures", `${fileName}.xlsx`);
         const buffer = fs.readFileSync(filePath);
@@ -11,8 +11,8 @@ function convertXlsxToJson (fileName) {
         const sheet = workbook.Sheets[sheetName];
 
         const jsonData = XLSX.utils.sheet_to_json(sheet, { defval: "" });
-
-        return jsonData[0];
+        console.log(JSON.stringify(jsonData[target]));
+        return jsonData[target];
     } catch (error) {
         console.log("Erro ao converter o arquivo:", error);
         return null;

@@ -12,8 +12,8 @@ module.exports = {
   e2e: {
     setupNodeEvents(on, config) {
       on("task", {
-        readXlsx({ fileName }) {
-         return convertXlsxToJson(fileName);
+        readXlsx({ fileName, target=0 }) {
+         return convertXlsxToJson(fileName, target);
         },
       });
     },

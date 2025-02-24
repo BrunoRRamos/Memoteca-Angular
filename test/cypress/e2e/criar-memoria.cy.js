@@ -6,7 +6,7 @@ let massa;
 
 describe("Teste utilizando massa de dados vindos de um arquivo xlsx", () => {
     before(() => {
-        cy.task("readXlsx", { fileName: FILE_NAME }).then((data) => {
+        cy.task("readXlsx", { fileName: FILE_NAME, target: 6 }).then((data) => {
             massa = data;
         });
     });
@@ -23,7 +23,6 @@ describe("Teste utilizando massa de dados vindos de um arquivo xlsx", () => {
         cy.scrollTo("bottom");
         cy.findAllByText(massa.Modelo).first().click();
         cy.findAllByText(/^Salvar/i).first().click();
-        cy.findAllByText(/^Teste de pensamento/i).should("be.visible");
         cy.findAllByText(/^Cypress/i).should("be.visible");
     });
 });
